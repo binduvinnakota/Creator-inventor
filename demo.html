@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprehensive CSS Guide</title>
+
+    <style>
+   
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Body Styling */
+  body {
+    font-family: Arial, sans-serif; /* Default font family */
+    line-height: 1.6; /* Default line height */
+    padding: 60px; /* Ensure content is below the fixed header */
+  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+    background-image:url('https://static.vecteezy.com/system/resources/previews/035/246/406/large_2x/ai-generated-reflective-skyscrapers-business-office-buildings-ai-generated-free-photo.jpg')
+    background-position: center;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  .main-container{
+    width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .content{
+      padding: 20px;
+      color: white;
+    }
+  
+  /* Header Section */
+  header {
+    background: #645a5a; /* Dark background color */
+    color:  White#fff; /* White text color */
+    padding: 1rem 0; /* Vertical padding */
+    position:fixed; /* Fix the header at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to top */
+    z-index: 1000; /* Ensure it is above other elements */
+  }
+  
+  nav ul {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+    list-style: none; /* Remove default list styling */
+  }
+  
+  nav a {
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Padding for links */
+    text-decoration:dotted; /* Remove underline */
+  }
+  
+  nav a:hover {
+      background: #444; /* Darker background on hover */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: #f4f4f4; /* Light grey background */
+    padding: 5rem 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  #hero h1 {
+    font-size: 2.5rem; /* Large font size */
+  }
+  
+  /* Basic Styling Section */
+  #basic-styling {
+    padding: 2rem; /* Padding */
+    background: #db1a1a; /* White background */
+  }
+  
+  .basic-styling-examples .text-color {
+    color: #3498db; /* Blue text color */
+  }
+  
+  .basic-styling-examples .text-alignment {
+    justify-content: end;
+    justify-items: flex-start;
+    text-align:right; /* Center text alignment */
+  }
+  
+  .basic-styling-examples .text-font {
+    font-family: "Courier New", Courier, monospace; /* Different font family */
+  }
+  
+  /* Layouts Section */
+  #layouts {
+    padding: 2rem; /* Padding */
+    background: #f4f4f4; /* Light grey background */
+  }
+  
+  .flexbox-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Space between items */
+    margin-bottom: 2rem; /* Bottom margin */
+   }
+  
+  .flexbox-item {
+    background: #3498db; /* Blue background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+    width: 50%; /* Width */
+    text-align: center; /* Center text */
+  }
+  
+  .grid-container {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1rem; /* Gap between items */
+  }
+  
+  .grid-item {
+    background: #2ecc71; /* Green background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  /* Positioning Section */
+  #positioning {
+    padding: 2rem; /* Padding */
+    background: #fff; /* White background */
+  }
+  
+  .positioning-container {
+    position: relative; /* Relative positioning */
+    height: 300px; /* Fixed height */
+    border: 1px solid #ddd; /* Border */
+    margin-bottom: 2rem; /* Bottom margin */
+  }
+  
+  .relative-box {
+    position: relative; /* Relative positioning */
+    top: 20px; /* Top offset */
+    left: 20px; /* Left offset */
+    background: #3498db; /* Blue background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+  }
+  
+  .absolute-box {
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Top offset */
+    right: 20px; /* Right offset */
+    background: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+  }
+  
+  .fixed-box {
+    position: fixed; /* Fixed positioning */
+    bottom: 20px; /* Bottom offset */
+    left: 20px; /* Left offset */
+    background: #f1c40f; /* Yellow background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+  }
+  
+  .sticky-box {
+     position:-webkit-sticky; /* Sticky positioning */
+    top: 0; /* Top offset */
+    background: #9b59b6; /* Purple background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+  }
+  
+  /* Backgrounds Section */
+  #backgrounds {
+    padding: 2rem; /* Padding */
+    background: #f4f4f4; /* Light grey background */
+  }
+  
+  .background-image {
+    background: url("https://tse2.mm.bing.net/th/id/OIP.NPzWpMMoW0pt1Wki8YDMtwHaFb?r=0&w=600&h=440&rs=1&pid=ImgDetMain&o=7&rm=3")
+      no-repeat center center/cover; /* Background image with cover */
+    height: 200px; /* Fixed height */
+    margin-bottom: 2rem; /* Bottom margin */
+    background-size: cover;
+  }
+  
+  .background-gradient {
+    background: linear-gradient(
+      to right,
+      #3498db,
+      #2ecc71
+    ); /* Linear gradient background */
+    height: 200px; /* Fixed height */
+  }
+  .radial-gradient-component {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background: radial-gradient(circle, #ff7e5f, #2318ed);
+    border-radius: 10px;
+  }
+  
+  /* Borders Section */
+  #borders {
+    padding: 2rem; /* Padding */
+    background: #fff; /* White background */
+  }
+  
+  .borders-container div {
+    margin-bottom: 1rem; /* Bottom margin */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  .border-solid {
+    border: 2px solid #3498db; /* Solid border */
+  }
+  
+  .border-dashed {
+    border: 2px dashed #e74c3c; /* Dashed border */
+  }
+  
+  .border-dotted {
+    border: 2px dotted #f1c40f; /* Dotted border */
+  }
+  
+  .border-radius {
+    border: 2px solid #9b59b6; /* Solid border */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Box Model Section */
+  #box-model {
+    padding: 2rem; /* Padding */
+    background: #f4f4f4; /* Light grey background */
+  }
+  
+  .box-model-container div {
+    margin-bottom: 1rem; /* Bottom margin */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  .box-padding {
+    background: #3498db; /* Blue background */
+    color: #fff; /* White text */
+    padding: 60px; /* Padding */
+  }
+  
+  .box-margin {
+    background: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+    margin: 20px; /* Margin */
+  }
+  
+  .box-border {
+    background: #f1c40f; /* Yellow background */
+    color: #fff; /* White text */
+    border: 5px solid #fff; /* Border */
+  }
+  
+  .box-content {
+    background: #2ecc71; /* Green background */
+    color: #fff; /* White text */
+    content: "Box with content"; /* Content */
+  }
+  
+  /* Transitions and Animations Section */
+  #transitions {
+    padding: 2rem; /* Padding */
+    background: #fff; /* White background */
+  }
+  
+  .transition-box {
+    background: #3498db; /* Blue background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+    transition: background 0.3s ease; /* Background transition */
+  }
+  
+  .transition-box:hover {
+    background: #2ecc71; /* Green background on hover */
+  }
+  
+  @keyframes example-animation {
+    0% {
+      background: #e74c3c; /* Red background */
+      transform: translateX(0); /* No translation */
+    }
+    50% {
+      background: #f1c40f; /* Yellow background */
+      transform: translateX(50px); /* Translate 50px to the right */
+    }
+    100% {
+      background: #3498db; /* Blue background */
+      transform: translateX(0); /* No translation */
+    }
+  }
+  
+  .animation-box {
+    background: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+    animation: example-animation 3s infinite; /* Animation */
+  }
+  
+  /* Typography Section */
+  #typography {
+    padding: 2rem; /* Padding */
+    background: #f4f4f4; /* Light grey background */
+  }
+  
+  .typography-container p {
+    margin-bottom: 1rem; /* Bottom margin */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  .main-container {
+  width: 80%; /* or maybe 60% depending on screen */
+  max-width: 800px; /* control max width */
+  margin: 80px auto; /* top margin to avoid fixed header */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* choose appropriate */
+  background: #645a5a;
+  z-index: 1000;
+}
+body {
+  padding-top: 60px; /* equal to header height */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.about-left, .about-right {
+  width: 48%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+    .font-family {
+    font-family: "Courier New", Courier, monospace; /* Different font family */
+  }
+  
+  .font-size {
+    font-size: 1.5rem; /* Different font size */
+  }
+  
+  .font-weight {
+    font-weight: bold; /* Bold font weight */
+  }
+  
+  .line-height {
+    line-height: 2; /* Different line height */
+  }
+  
+  .letter-spacing {
+    letter-spacing: 2px; /* Different letter spacing */
+  }
+  
+  /* Display Section */
+  #display {
+    padding: 2rem; /* Padding */
+    background: #fff; /* White background */
+  }
+  
+  .display-container div {
+    margin-bottom: 1rem; /* Bottom margin */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Center text */
+  }
+  
+  .display-block {
+    display: block; /* Block display */
+    background: #3498db; /* Blue background */
+    color: #fff; /* White text */
+  }
+  
+  .display-inline {
+    display: inline; /* Inline display */
+    background: #e74c3c; /* Red background */
+    color: #fff; /* White text */
+  }
+  
+  .display-flex {
+    display: flex; /* Flex display */
+    justify-content: center; /* Center items */
+    background: #2ecc71; /* Green background */
+    color: #fff; /* White text */
+  }
+  
+  .display-grid {
+    display: grid; /* Grid display */
+    place-items: center; /* Center items */
+    background: #f1c40f; /* Yellow background */
+    color: #fff; /* White text */
+  }
+  
+  .display-none {
+    display: none; /* None display */
+  }
+  table{
+    border-collapse:collapse;
+  }
+  th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Footer */
+  footer {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    padding: 1rem 0; /* Vertical padding */
+  }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About us">About us</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#Login">Login</a></li>
+          <li><a href="#Register">Register</a></li>
+         </ul>
+      </nav>
+    </header>
+<section id="Home">
+    
+      <h1>Welcome to Company Name</h1>
+      <p>Your trusted for business solutions.We specialize in delivering top-notch services to help your company thrive.</p>
+</section>   
+<section id="About us">
+    
+        <h2>About us</h2>
+        <p>Company name was founded with the nnellesign to 'Innovate and lead in our industry.We value<br>excellence,integrity,and custorier satisfaction</p>
+        <ul>
+            <li>Global presence in 10= countrates<span style="margin: 155px;"></span><b>Funded</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2005</li>
+                <li>Founded in 2008 with over 20 years<span style="margin: 150px;"></span><b>HeadQuarters</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Newyork,USA</li>
+                <li>Award winning ream of 500+ professionals<span style="margin:125px"></span><b>Employees</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;500+</li>
+        </ul>
+</section>
+        <section id="services">
+            <div class="columns">
+            <div class="left">
+              <div style="display:flex;justify-content:space-between;">
+              <div style="width:30%;">           
+          <h2>Our services</h2>
+      <p>We offer a comprehensive rangs of services to<br> help businesses succeed:</p>
+               <table border="3">
+                <tr>
+                 <th>Day</th>
+                  <th>open</th> 
+                  <th>Close</th>
+                </tr>
+                  <tr>
+                    <td>Monday</td>
+                    <td>9:00</td>
+                    <td>5:00AM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>10:00</td>
+                    <td>Newyork,USA</td>
+                 </tr>
+                 <tr>
+                    <td>Wednesday</td>
+                    <td>9:00</td>   
+                    <td>5:00PM</td>
+                 </tr>
+                 <tr>
+                    <td>Friday</td>
+                    <td>4:00</td>
+                    <td>40T</td>
+                 </tr>
+                </table>
+                <h4>Out mean office</h4>
+                <p>Locallxoprse</p>
+                </div>
+                <div style="width:70%;">
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6321053174297!2d78.37795887498625!3d17.429434383464987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb930031d4883d%3A0xe6023995182a7691!2sHcl%20tech!5e0!3m2!1sen!2sin!4v1757755777208!5m2!1sen!2sin" 
+      width="500"
+      height="300"
+      style="border:0"
+      loading="lazy">
+      </iframe>
+    </div>
+    </div>
+    </div>
+    </div>
+      </section>
+      <p><b>Monday</b><span style="margin:40px;"></span>Trepday</p>
+      <p><b>Tuesday</b><span style="margin:40px;"></span>Friday</p>
+      <p><b>Employees</b><span style="margin:30px;"></span>500+</p>
+      </section>
+    <section id="contact">
+      <div style="display: flex; flex-direction: column ;align-items:center;width:200vh;height:1vh;margin-bottom: 1;">
+        <div style="position: relative;top: -200px;">
+      <h3 >Get in Touch</h3>
+      <form>
+        <label>Name:</label>
+        <input type="text"name="name" style="width:300px;"/><br>
+        <label>Email:</label>
+        <input type="email"name="email" style="width:300px;"/><br>
+        <label>Department:</label>
+        <select name="department" style="width:300px;">
+          <option>sales</option>
+          <option>HR</option>
+        </select><br>
+        <label>Message:</label>
+        <textarea name="message" style="width:300px;">HumanRessicurses</textarea><br>
+            <button type="submit">Send Message</button>
+      <button type="Reset">Reset Form</button>
+      <div style="position: relative;left: -250px">
+  <a href="#">Back to top</a>
+</div>
+      </form>
+    </div>
+     </div>
+    </section>
+<div class="background-div">
+  </div>
+</body>
+</html>
